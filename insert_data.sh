@@ -18,7 +18,7 @@ do
     then
   
       INSERT_WINNER_RESULT=$($PSQL "INSERT INTO teams(name) VALUES('$WINNER')")
-      # Получаем сгенерированный team_id для этой новой команды
+      
       WINNER_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$WINNER'")
     fi
 
